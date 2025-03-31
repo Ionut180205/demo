@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details - Mobilar Luxury</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="main-nav">
+            <button class="hamburger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="nav-links">
+                <a href="index.html">New Arrivals</a>
+                <a href="sofas.html">Sofas</a>
+                <a href="tables.html">Tables</a>
+                <a href="beds.html">Beds</a>
+                <a href="chairs.html">Chairs</a>
+            </div>
+            <div class="nav-icons">
+                <a href="tel:+1234567890" class="phone-icon">
+                    <i class="fas fa-phone"></i>
+                </a>
+                <a href="#" class="cart-icon" onclick="toggleCart(); return false;">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="product-details-page">
+        <div class="product-gallery">
+            <div class="main-image">
+                <img id="mainImage" src="" alt="Product Image">
+            </div>
+            <div class="thumbnail-images">
+                <img class="thumbnail active" src="" alt="Thumbnail 1">
+                <img class="thumbnail" src="" alt="Thumbnail 2">
+                <img class="thumbnail" src="" alt="Thumbnail 3">
+            </div>
+        </div>
+        <div class="product-info">
+            <h1 id="productName"></h1>
+            <p class="price" id="productPrice"></p>
+            <div class="product-description">
+                <h2>Description</h2>
+                <p id="productDescription"></p>
+            </div>
+            <div class="product-specifications">
+                <h2>Specifications</h2>
+                <ul id="productSpecs"></ul>
+            </div>
+            <div class="product-actions">
+                <div class="quantity-selector">
+                    <button onclick="updateQuantityInput(-1)">-</button>
+                    <input type="number" id="quantity" value="1" min="1">
+                    <button onclick="updateQuantityInput(1)">+</button>
+                </div>
+                <button class="add-to-cart" id="addToCartBtn">Add to Cart</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Need Help?</h3>
+                <ul>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Delivery & Returns</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <ul>
+                    <li><a href="#">Our Story</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Press</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Cookie Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Mobilar Luxury. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <div id="cartModal" class="cart-modal">
+        <div class="cart-content">
+            <div class="cart-header">
+                <h2>Shopping Cart</h2>
+                <button class="close-cart" onclick="toggleCart()">&times;</button>
+            </div>
+            <div class="cart-items">
+                <!-- Cart items will be added by JavaScript -->
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    Total: <span id="cartTotal">$0.00</span>
+                </div>
+                <div class="cart-buttons">
+                    <button class="continue-shopping" onclick="toggleCart()">Continue Shopping</button>
+                    <button class="checkout">Checkout</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="product-details.js"></script>
+</body>
+</html> 
