@@ -663,24 +663,45 @@ footer::before {
 
 @media (max-width: 768px) {
     .products-grid {
-        grid-template-columns: 1fr;
-        gap: 2rem;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
         padding: 1rem;
     }
     
     .new-arrivals .products-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
     }
     
     .product-card {
-        max-width: 400px;
-        margin: 0 auto;
+        width: 100%;
+        padding: 0.5rem;
+    }
+
+    .product-card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        margin-bottom: 0.5rem;
+    }
+
+    .product-card h3 {
+        font-size: 0.9rem;
+        padding: 0.3rem 0.5rem;
+        margin-bottom: 0.3rem;
+    }
+
+    .product-card .price {
+        font-size: 0.85rem;
+        padding: 0 0.5rem;
+        margin-bottom: 0.5rem;
     }
 
     .add-to-cart {
-        margin: 0 auto 1rem;
-        width: calc(100% - 2rem);
+        margin: 0.3rem auto;
+        width: calc(100% - 0.5rem);
         text-align: center;
+        font-size: 0.8rem;
+        padding: 0.5rem 1rem;
     }
 
     .hamburger-menu {
@@ -784,8 +805,48 @@ footer::before {
 }
 
 @media (max-width: 480px) {
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.8rem;
+        padding: 0.8rem;
+        width: 100%;
+    }
+    
     .product-card {
-        max-width: 100%;
+        width: 100%;
+        padding: 0.4rem;
+        display: flex;
+        flex-direction: column;
+        min-height: 200px;
+    }
+
+    .product-card img {
+        width: 100%;
+        height: 120px;
+        object-fit: cover;
+        margin-bottom: 0.3rem;
+    }
+
+    .product-card h3 {
+        font-size: 0.8rem;
+        padding: 0.2rem 0.3rem;
+        margin-bottom: 0.2rem;
+        line-height: 1.2;
+        min-height: 2.4em;
+    }
+
+    .product-card .price {
+        font-size: 0.75rem;
+        padding: 0 0.3rem;
+        margin-bottom: 0.3rem;
+    }
+
+    .add-to-cart {
+        margin: 0.2rem auto;
+        width: calc(100% - 0.3rem);
+        text-align: center;
+        font-size: 0.75rem;
+        padding: 0.4rem 0.8rem;
     }
 
     .product-details-page {
